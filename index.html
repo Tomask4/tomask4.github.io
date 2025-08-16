@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TomasK4 Projects</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        .stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .star {
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            animation: twinkle 4s infinite;
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 1; }
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 2rem 0;
+            position: relative;
+        }
+
+        .language-toggle {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 25px;
+            padding: 8px 20px;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .language-toggle:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-color: rgba(255, 255, 255, 0.4);
+            transform: translateY(-2px);
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            font-weight: 300;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            background: linear-gradient(45deg, #fff, #e0e7ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .project-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+            transform: rotate(45deg);
+            transition: all 0.6s;
+            opacity: 0;
+        }
+
+        .project-card:hover::before {
+            animation: shimmer 1.5s ease-in-out;
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); opacity: 0; }
+            50% { opacity: 1; }
+            100% { transform: translateX(100%) translateY(100%) rotate(45deg); opacity: 0; }
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            border-color: rgba(255, 255, 255, 0.4);
+        }
+
+        .project-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+            color: #fff;
+        }
+
+        .project-card p {
+            opacity: 0.9;
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .tag {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .project-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .project-link {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        .project-link:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-color: rgba(255, 255, 255, 0.6);
+            transform: translateY(-2px);
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 4rem 2rem;
+            opacity: 0.7;
+        }
+
+        .empty-state h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .projects-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .language-toggle {
+                position: relative;
+                top: auto;
+                right: auto;
+                margin-bottom: 1rem;
+                display: inline-block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="stars"></div>
+    
+    <div class="container">
+        <div class="header">
+            <button class="language-toggle" onclick="toggleLanguage()" id="langToggle">🇳🇱 Nederlands</button>
+            <h1 id="mainTitle">Tomask4 Projects</h1>
+            <p id="mainSubtitle">All my GitHub projects on one page</p>
+        </div>
+
+        <div id="projectsGrid" class="projects-grid">
+            <!-- Projects worden hier dynamisch toegevoegd -->
+        </div>
+
+        <div id="emptyState" class="empty-state" style="display: none;">
+            <h3 id="emptyTitle">No projects yet</h3>
+            <p id="emptyText">Add projects by changing the javascript array!</p>
+        </div>
+    </div>
+
+    <script>
+        // GLOBALE VARIABELEN - ALTIJD EERST!
+        let currentLanguage = 'en';
+        
+        const translations = {
+            en: {
+                mainTitle: "Tomask4 Projects",
+                mainSubtitle: "All my GitHub projects on one page",
+                emptyTitle: "No projects yet",
+                emptyText: "Add projects by changing the javascript array!",
+                langToggle: "🇳🇱 Nederlands",
+                githubBtn: "GitHub",
+                demoBtn: "Demo"
+            },
+            nl: {
+                mainTitle: "Tomask4 Projecten",
+                mainSubtitle: "Al mijn GitHub projecten op één pagina",
+                emptyTitle: "Nog geen projecten",
+                emptyText: "Voeg projecten toe door de JavaScript array te bewerken!",
+                langToggle: "🇺🇸 English",
+                githubBtn: "GitHub",
+                demoBtn: "Demo"
+            }
+        };
+
+        const projects = [
+            {
+                name: "Encryptor",
+                description: {
+                    en: "An encryption tool that allows you to encrypt and decrypt text using various algorithms.",
+                    nl: "Een encryptietool waarmee je tekst kunt versleutelen en ontsleutelen met verschillende algoritmen."
+                },
+                tags: ["HTML", "CSS", "JavaScript"],
+                github: "https://github.com/Tomask4/encryptor",
+                demo: "https://tomask4.github.io/encryptor/"
+            },
+            {
+                name: "DevTools",
+                description: {
+                    en: "A collection of developer tools including a JSON formatter, Regex tester and more.",
+                    nl: "Een verzameling ontwikkelaarshulpmiddelen inclusief JSON formatter, Regex tester en meer."
+                },
+                tags: ["HTML", "CSS", "JavaScript"],
+                github: "https://github.com/Tomask4/devtools",
+                demo: "https://tomask4.github.io/devtools/"
+            },
+            {
+                name: "ChatDPT [fake]",
+                description: {
+                    en: "A simple chat interface that simulates a conversation with an AI.",
+                    nl: "Een eenvoudige chatinterface die een gesprek met een AI simuleert."
+                },
+                tags: ["HTML", "CSS", "JavaScript"],
+                github: "https://github.com/Tomask4/ChatDPT-fake-",
+                demo: "https://tomask4.github.io/ChatDPT-fake-/"
+            },
+            {
+                name: "SkipSite",
+                description: {
+                    en: "A fun game where you have to skip ads by doing various tasks.",
+                    nl: "Een leuk spel waarbij je advertenties moet overslaan door verschillende taken uit te voeren."
+                },
+                tags: ["HTML", "CSS", "Javascript"],
+                github: "https://github.com/Tomask4/skipsite",
+                demo: "https://tomask4.github.io/skipsite/"
+            },
+            {
+                name: "Ugliest site",
+                description: {
+                    en: "A project that showcases the ugliest website design possible, just for fun!",
+                    nl: "Een project dat het lelijkste websiteontwerp toont dat mogelijk is, gewoon voor de lol!"
+                },
+                tags: ["HTML", "CSS", "JavaScript"],
+                github: "https://github.com/Tomask4/Lelijkste-site",
+                demo: "https://tomask4.github.io/Lelijkste-site/"
+            },
+            {
+                name: "Time PopUp",
+                description: {
+                    en: "A simple JavaScript project that shows a popup with the current time.",
+                    nl: "Een eenvoudig JavaScript-project dat een popup toont met de huidige tijd."
+                },
+                tags: ["HTML", "CSS", "JavaScript"],
+                github: "https://github.com/Tomask4/time",
+                demo: "https://tomask4.github.io/time/"
+            },
+            {
+                name: "Kahoot Flooder",
+                description: {
+                    en: "A tool that allows you to flood a Kahoot game with fake players.",
+                    nl: "Een tool waarmee je een Kahoot-spel kunt overspoelen met nepspelers."
+                },
+                tags: ["HTML", "CSS", "JavaScript", "Node.js", "Kahoot API"],
+                github: "https://github.com/Tomask4/kahoot-flooder",
+                demo: "https://kahoot-flooder-t7h4.onrender.com/"
+            },
+            {
+                name: "Scoreboard",
+                description: {
+                    en: "A simple scoreboard application that allows you to keep track of scores in a game.",
+                    nl: "Een eenvoudige scorebord-applicatie waarmee je scores in een spel kunt bijhouden."
+                },
+                tags: ["HTML", "CSS", "JavaScript"],
+                github: "https://github.com/Tomask4/scoreboard",
+                demo: "https://tomask4.github.io/scoreboard/"
+            }
+        ];
+
+        // FUNCTIES
+        function createStars() {
+            const starsContainer = document.querySelector('.stars');
+            for (let i = 0; i < 100; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                star.style.left = Math.random() * 100 + '%';
+                star.style.top = Math.random() * 100 + '%';
+                star.style.width = Math.random() * 3 + 1 + 'px';
+                star.style.height = star.style.width;
+                star.style.animationDelay = Math.random() * 4 + 's';
+                starsContainer.appendChild(star);
+            }
+        }
+
+        function displayProjects() {
+            const grid = document.getElementById('projectsGrid');
+            const emptyState = document.getElementById('emptyState');
+            
+            if (projects.length === 0) {
+                grid.style.display = 'none';
+                emptyState.style.display = 'block';
+                return;
+            }
+            
+            grid.style.display = 'grid';
+            emptyState.style.display = 'none';
+            
+            const lang = translations[currentLanguage];
+            
+            grid.innerHTML = projects.map((project, index) => `
+                <div class="project-card">
+                    <h3>${project.name}</h3>
+                    <p>${project.description[currentLanguage]}</p>
+                    <div class="project-tags">
+                        ${project.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+                    </div>
+                    <div class="project-links">
+                        ${project.github ? `<a href="${project.github}" class="project-link" target="_blank">${lang.githubBtn}</a>` : ''}
+                        ${project.demo ? `<a href="${project.demo}" class="project-link" target="_blank">${lang.demoBtn}</a>` : ''}
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function toggleLanguage() {
+            currentLanguage = currentLanguage === 'en' ? 'nl' : 'en';
+            updateLanguage();
+            displayProjects();
+        }
+
+        function updateLanguage() {
+            const lang = translations[currentLanguage];
+            document.getElementById('mainTitle').textContent = lang.mainTitle;
+            document.getElementById('mainSubtitle').textContent = lang.mainSubtitle;
+            document.getElementById('emptyTitle').textContent = lang.emptyTitle;
+            document.getElementById('emptyText').textContent = lang.emptyText;
+            document.getElementById('langToggle').textContent = lang.langToggle;
+        }
+
+        // INITIALISATIE
+        createStars();
+        displayProjects();
+    </script>
+</body>
+</html>
