@@ -417,17 +417,13 @@
                 name: "Multi-Tool Dashboard",
                 description: {
                     en: "A modern full-screen multi-tool dashboard with Firebase Google authentication, featuring a ToDo app, converters, code beautifiers, themes, and curated developer links",
-                    nl: "Een modern schermvullend multi-tool dashboard met Firebase Google-authenticatie, inclusief een ToDo-app, converters, code beautifiers, thema’s en handige developer-links"
+                    nl: "Een modern schermvullend multi-tool dashboard met Firebase Google-authenticatie, inclusief een ToDo-app, converters, code beautifiers, thema's en handige developer-links"
                 },
                 tags: [
                     "HTML",
                     "CSS",
                     "JavaScript",
-                    "Firebase",
-                    "Firebase Authentication",
-                    "Cloud Firestore",
-                    "Material Design",
-                    "Google Fonts"
+                    "Firebase"
                 ],
                 demo: "https://toolbox-a7d0d.web.app/"
             },
@@ -440,14 +436,7 @@
                 tags: [
                     "HTML",
                     "CSS",
-                    "JavaScript",
-                    "UI Components",
-                    "Templates",
-                    "Design System",
-                    "Theme Customizer",
-                    "Responsive Design",
-                    "Google Fonts",
-                    "No Framework"
+                    "JavaScript"
                 ],
                 github: "https://github.com/Tomask4/TemplateStudio/",
                 demo: "https://tomask4.github.io/TemplateStudio/"
@@ -484,7 +473,10 @@
             
             const lang = translations[currentLanguage];
             
-            grid.innerHTML = projects.map((project, index) => `
+            // Reverse the array to show newest projects first
+            const reversedProjects = [...projects].reverse();
+            
+            grid.innerHTML = reversedProjects.map((project, index) => `
                 <div class="project-card">
                     <h3>${project.name}</h3>
                     <p>${project.description[currentLanguage]}</p>
