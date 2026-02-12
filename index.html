@@ -65,9 +65,6 @@
             display: flex;
             gap: 2rem;
             list-style: none;
-            display: flex;
-            gap: 2rem;
-            list-style: none;
             align-items: center;
         }
 
@@ -113,6 +110,15 @@
             max-width: 800px;
             text-align: center;
             z-index: 1;
+        }
+
+        .profile-image {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin: 0 auto 1.5rem;
+            border: 3px solid var(--accent);
+            box-shadow: 0 0 30px rgba(59, 130, 246, 0.3);
         }
 
         .hero h1 {
@@ -231,13 +237,24 @@
 
         .project-header {
             margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .project-favicon {
+            width: 32px;
+            height: 32px;
+            border-radius: 6px;
+            flex-shrink: 0;
+            object-fit: cover;
         }
 
         .project-name {
             font-size: 1.5rem;
             font-weight: 700;
-            margin-bottom: 0.5rem;
             color: var(--text-primary);
+            margin: 0;
         }
 
         .project-description {
@@ -348,7 +365,8 @@
     <section id="home" class="hero">
         <div class="bg-grid"></div>
         <div class="hero-content">
-            <h1 data-lang-key="hero.title">Developer</h1>
+            <img src="https://raw.githubusercontent.com/Tomask4/tomask4.github.io/refs/heads/main/Logo.png" alt="Tomask4" class="profile-image">
+            <h1 data-lang-key="hero.title">Tomask4</h1>
             <p data-lang-key="hero.description">I build web applications, tools and experiments. From practical developer utilities to creative side projects</p>
             <a href="#projects" class="cta-button" data-lang-key="hero.cta">View Projects</a>
         </div>
@@ -376,7 +394,7 @@
             en: {
                 'nav.home': 'Home',
                 'nav.projects': 'Projects',
-                'hero.title': 'Developer',
+                'hero.title': 'Tomask4',
                 'hero.description': 'I build web applications, tools and experiments. From practical developer utilities to creative side projects.',
                 'hero.cta': 'View Projects',
                 'projects.title': 'Projects',
@@ -386,7 +404,7 @@
             nl: {
                 'nav.home': 'Home',
                 'nav.projects': 'Projecten',
-                'hero.title': 'Developer',
+                'hero.title': 'Tomask4',
                 'hero.description': 'Ik bouw webapplicaties, tools en experimenten. Van praktische developer utilities tot creatieve side projects.',
                 'hero.cta': 'Bekijk Projecten',
                 'projects.title': 'Projecten',
@@ -572,6 +590,16 @@
         // Current language (default English)
         let currentLang = 'en';
 
+        // Function to get favicon URL from a website using DuckDuckGo's service
+        function getFaviconUrl(url) {
+            try {
+                const hostname = new URL(url).hostname;
+                return `https://icons.duckduckgo.com/ip3/${hostname}.ico`;
+            } catch {
+                return null;
+            }
+        }
+
         // Update all text content based on language
         function updateLanguage(lang) {
             currentLang = lang;
@@ -607,9 +635,16 @@
                     ${project.github ? `<a href="${project.github}" target="_blank" class="project-link link-github">GitHub</a>` : ''}
                     ${project.demo ? `<a href="${project.demo}" target="_blank" class="project-link link-demo">Demo</a>` : ''}
                 `;
+
+                // Get favicon URL or use fallback
+                const faviconUrl = project.demo ? getFaviconUrl(project.demo) : null;
+                const faviconHTML = faviconUrl 
+                    ? `<img src="${faviconUrl}" alt="${project.name}" class="project-favicon" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22%233b82f6%22%3E%3Cpath d=%22M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z%22/%3E%3C/svg%3E'">` 
+                    : `<img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%233b82f6'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z'/%3E%3C/svg%3E" alt="Default icon" class="project-favicon">`;
                 
                 card.innerHTML = `
                     <div class="project-header">
+                        ${faviconHTML}
                         <h3 class="project-name">${project.name}</h3>
                     </div>
                     <p class="project-description">${project.description[currentLang]}</p>
