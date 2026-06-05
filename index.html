@@ -6,42 +6,27 @@
     <!-- Standard favicons -->
     <link rel="icon" type="image/png" sizes="16x16" href="https://raw.githubusercontent.com/Tomask4/tomask4.github.io/refs/heads/main/favicon-16x16.png">
     <link rel="icon" type="image/png" sizes="32x32" href="https://raw.githubusercontent.com/Tomask4/tomask4.github.io/refs/heads/main/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="48x48" href="https://raw.githubusercontent.com/Tomask4/tomask4.github.io/refs/heads/main/favicon-48x48.png">
-
-    <!-- Apple Touch Icon (iOS) -->
     <link rel="apple-touch-icon" sizes="180x180" href="https://raw.githubusercontent.com/Tomask4/tomask4.github.io/refs/heads/main/apple-touch-icon.png">
-
-    <!-- Android Chrome -->
-    <link rel="icon" type="image/png" sizes="192x192" href="https://raw.githubusercontent.com/Tomask4/tomask4.github.io/refs/heads/main/android-chrome-192x192.png">
-    <link rel="icon" type="image/png" sizes="512x512" href="https://raw.githubusercontent.com/Tomask4/tomask4.github.io/refs/heads/main/android-chrome-512x512.png">
-
-    <!-- Standaard fallback -->
     <link rel="shortcut icon" href="https://raw.githubusercontent.com/Tomask4/tomask4.github.io/refs/heads/main/favicon-32x32.png">
-
-    <!-- Web App Manifest (optioneel) -->
     <link rel="manifest" href="https://raw.githubusercontent.com/Tomask4/tomask4.github.io/refs/heads/main/site.webmanifest">
-
-    <!-- Microsoft Tiles (optioneel) -->
     <meta name="msapplication-TileImage" content="https://raw.githubusercontent.com/Tomask4/tomask4.github.io/refs/heads/main/android-chrome-512x512.png">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="theme-color" content="#ffffff">
+    <meta name="msapplication-TileColor" content="#050810">
+    <meta name="theme-color" content="#050810">
+
     <!-- Primary SEO -->
     <title>Tomask4 — Web Projects & Tools</title>
-    <meta name="description" content="Tomask4 — hobbyist developer uit Amsterdam. Bouwt webapps, Firebase-projecten en Minecraft servers gewoon omdat het leuk is.">
+    <meta name="description" content="Tomask4 — hobbyist developer uit Amsterdam. Bouwt webapps, Firebase-projecten en Minecraft servers gewoon omdat het leuk is. 18+ open-source projecten.">
     <meta name="keywords" content="Tomask4, web development, developer tools, Firebase, JavaScript, open source, Amsterdam, Minecraft mods, Modrinth">
     <meta name="author" content="Tomask4">
     <link rel="canonical" href="https://www.tomask4.nl/">
 
-    <!-- Open Graph (Facebook, Discord, WhatsApp, LinkedIn…) -->
+    <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.tomask4.nl/">
     <meta property="og:title" content="Tomask4 — Web Projects & Tools">
-    <meta property="og:description" content="Hobbyist developer uit Amsterdam. Bouwt webapps, Firebase-projecten en Minecraft servers gewoon omdat het leuk is.">
+    <meta property="og:description" content="Hobbyist developer uit Amsterdam. Bouwt webapps, Firebase-projecten en Minecraft servers gewoon omdat het leuk is. 18+ open-source projecten.">
     <meta property="og:image" content="https://raw.githubusercontent.com/Tomask4/tomask4.github.io/refs/heads/main/android-chrome-512x512.png">
-    <meta property="og:image:width" content="512">
-    <meta property="og:image:height" content="512">
     <meta property="og:locale" content="en_US">
-    <meta property="og:locale:alternate" content="nl_NL">
     <meta property="og:site_name" content="Tomask4">
 
     <!-- Twitter / X Card -->
@@ -50,7 +35,7 @@
     <meta name="twitter:description" content="Hobbyist developer uit Amsterdam. Bouwt webapps, Firebase-projecten en Minecraft servers gewoon omdat het leuk is.">
     <meta name="twitter:image" content="https://raw.githubusercontent.com/Tomask4/tomask4.github.io/refs/heads/main/android-chrome-512x512.png">
 
-    <!-- JSON-LD Structured Data (Google rich results) -->
+    <!-- JSON-LD -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -63,53 +48,110 @@
         "name": "Tomask4",
         "url": "https://www.tomask4.nl/",
         "image": "https://raw.githubusercontent.com/Tomask4/tomask4.github.io/refs/heads/main/Logo.png",
-        "sameAs": [
-          "https://github.com/Tomask4",
-          "https://modrinth.com/user/TomasK4"
-        ],
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Amsterdam",
-          "addressCountry": "NL"
-        }
+        "sameAs": ["https://github.com/Tomask4","https://modrinth.com/user/TomasK4"],
+        "address": {"@type": "PostalAddress","addressLocality": "Amsterdam","addressCountry": "NL"}
       }
     }
     </script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- anime.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"></script>
+
     <style>
-        * {
+        *, *::before, *::after {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
         :root {
-            --bg-primary: #0a0e17;
-            --bg-secondary: #141824;
-            --bg-card: #1a1f2e;
+            --bg: #050810;
+            --bg2: #090d1a;
+            --card: #0f1525;
             --accent: #3b82f6;
-            --accent-light: #60a5fa;
-            --text-primary: #e5e7eb;
-            --text-secondary: #9ca3af;
-            --border: #2d3548;
+            --accent2: #60a5fa;
+            --accent3: #93c5fd;
+            --text: #e8edf5;
+            --text2: #8b96b0;
+            --border: rgba(59,130,246,0.12);
+            --border2: rgba(59,130,246,0.22);
         }
 
+        html { scroll-behavior: smooth; }
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            background: var(--bg-primary);
-            color: var(--text-primary);
+            font-family: 'DM Sans', sans-serif;
+            background: var(--bg);
+            color: var(--text);
             line-height: 1.6;
             overflow-x: hidden;
         }
 
-        /* Navigation */
+        /* ─── LOADER ─────────────────────────────────────── */
+        #loader {
+            position: fixed;
+            inset: 0;
+            background: var(--bg);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .loader-logo {
+            font-family: 'Syne', sans-serif;
+            font-weight: 800;
+            font-size: clamp(2.5rem, 8vw, 5rem);
+            letter-spacing: -0.04em;
+            background: linear-gradient(135deg, var(--accent2), var(--accent3));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            opacity: 0;
+        }
+
+        .loader-bar-wrap {
+            width: 160px;
+            height: 2px;
+            background: var(--border);
+            border-radius: 2px;
+            overflow: hidden;
+        }
+
+        .loader-bar {
+            height: 100%;
+            width: 0;
+            background: linear-gradient(90deg, var(--accent), var(--accent2));
+            border-radius: 2px;
+        }
+
+        /* ─── CANVAS (particle bg) ────────────────────────── */
+        #particle-canvas {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* ─── NAV ─────────────────────────────────────────── */
         nav {
             position: fixed;
             top: 0;
             width: 100%;
-            background: rgba(10, 14, 23, 0.92);
-            backdrop-filter: blur(10px);
+            background: rgba(5,8,16,0.75);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
             border-bottom: 1px solid var(--border);
             z-index: 1000;
+            opacity: 0;
+            transform: translateY(-20px);
         }
 
         .nav-content {
@@ -123,13 +165,16 @@
         }
 
         .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            background: linear-gradient(135deg, var(--accent), var(--accent-light));
+            font-family: 'Syne', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            background: linear-gradient(135deg, var(--accent2), var(--accent3));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
             flex-shrink: 0;
+            text-decoration: none;
         }
 
         .nav-links {
@@ -140,36 +185,38 @@
         }
 
         .nav-links a {
-            color: var(--text-secondary);
+            color: var(--text2);
             text-decoration: none;
-            transition: color 0.3s;
             font-weight: 500;
+            font-size: 0.9rem;
+            letter-spacing: 0.02em;
+            transition: color 0.25s;
             white-space: nowrap;
         }
 
-        .nav-links a:hover {
-            color: var(--text-primary);
-        }
+        .nav-links a:hover { color: var(--text); }
 
         .lang-toggle {
             background: transparent;
-            border: 2px solid var(--border);
-            color: var(--text-secondary);
+            border: 1px solid var(--border2);
+            color: var(--text2);
             padding: 0.4rem 0.85rem;
             border-radius: 6px;
             cursor: pointer;
-            font-weight: 600;
-            transition: all 0.3s;
-            font-size: 0.9rem;
+            font-family: 'Syne', sans-serif;
+            font-weight: 700;
+            font-size: 0.82rem;
+            letter-spacing: 0.08em;
+            transition: all 0.25s;
             white-space: nowrap;
         }
 
         .lang-toggle:hover {
             border-color: var(--accent);
-            color: var(--accent);
+            color: var(--accent2);
         }
 
-        /* Hamburger button */
+        /* Hamburger */
         .nav-hamburger {
             display: none;
             flex-direction: column;
@@ -178,11 +225,11 @@
             width: 36px;
             height: 36px;
             background: transparent;
-            border: 1px solid var(--border);
+            border: 1px solid var(--border2);
             border-radius: 6px;
             cursor: pointer;
             padding: 6px;
-            transition: border-color 0.3s;
+            transition: border-color 0.25s;
         }
 
         .nav-hamburger:hover { border-color: var(--accent); }
@@ -191,7 +238,7 @@
             display: block;
             width: 100%;
             height: 2px;
-            background: var(--text-secondary);
+            background: var(--text2);
             border-radius: 2px;
             transition: all 0.3s;
             transform-origin: center;
@@ -201,11 +248,10 @@
         .nav-hamburger.open span:nth-child(2) { opacity: 0; }
         .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
-        /* Mobile nav drawer */
         .nav-drawer {
             display: none;
             flex-direction: column;
-            background: rgba(10, 14, 23, 0.98);
+            background: rgba(5,8,16,0.98);
             border-top: 1px solid var(--border);
             padding: 0.5rem 2rem 1.25rem;
         }
@@ -224,7 +270,7 @@
             display: block;
             width: 100%;
             padding: 0.85rem 0;
-            color: var(--text-secondary);
+            color: var(--text2);
             text-decoration: none;
             font-weight: 500;
             font-size: 1rem;
@@ -236,359 +282,195 @@
         }
 
         .nav-drawer a:hover,
-        .nav-drawer .lang-toggle:hover { color: var(--text-primary); }
+        .nav-drawer .lang-toggle:hover { color: var(--text); }
 
-        /* Hero Section */
+        /* ─── HERO ────────────────────────────────────────── */
         .hero {
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
             position: relative;
-            padding: 6rem 2rem 2rem; /* 6rem top = navbar height + buffer so logo is never hidden */
+            padding: 6rem 2rem 4rem;
+            z-index: 1;
+        }
+
+        /* Animated grid */
+        .hero-grid {
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(59,130,246,0.06) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(59,130,246,0.06) 1px, transparent 1px);
+            background-size: 60px 60px;
+            mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 40%, transparent 100%);
+        }
+
+        /* Glowing orbs */
+        .hero-orb {
+            position: absolute;
+            border-radius: 50%;
+            pointer-events: none;
+            filter: blur(80px);
+        }
+
+        .hero-orb-1 {
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(59,130,246,0.12) 0%, transparent 70%);
+            top: -100px;
+            left: -100px;
+        }
+
+        .hero-orb-2 {
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(96,165,250,0.08) 0%, transparent 70%);
+            bottom: 0;
+            right: -50px;
         }
 
         .hero-content {
-            max-width: 800px;
+            max-width: 780px;
             text-align: center;
             z-index: 1;
+            position: relative;
+        }
+
+        /* Profile image with ring animation */
+        .profile-wrap {
+            position: relative;
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 2rem;
+            opacity: 0;
+        }
+
+        .profile-ring {
+            position: absolute;
+            inset: -6px;
+            border-radius: 50%;
+            border: 2px solid transparent;
+            background: linear-gradient(var(--bg), var(--bg)) padding-box,
+                        linear-gradient(135deg, var(--accent), var(--accent3), var(--accent)) border-box;
+            animation: ringRotate 4s linear infinite;
+        }
+
+        @keyframes ringRotate {
+            to { transform: rotate(360deg); }
         }
 
         .profile-image {
             width: 120px;
             height: 120px;
             border-radius: 50%;
-            margin: 0 auto 1.5rem;
-            border: 3px solid var(--accent);
-            box-shadow: 0 0 30px rgba(59, 130, 246, 0.3);
+            object-fit: cover;
+            display: block;
+            visibility: visible;
+            opacity: 1;
+            z-index: 10;
+            position: relative;
         }
 
-        .hero h1 {
-            font-size: clamp(2.5rem, 8vw, 5rem);
+        /* Title: characters split for anime.js */
+        .hero-title {
+            font-family: 'Syne', sans-serif;
+            font-size: clamp(3rem, 10vw, 6rem);
             font-weight: 800;
-            margin-bottom: 1rem;
-            background: linear-gradient(135deg, var(--text-primary), var(--accent-light));
+            letter-spacing: -0.04em;
+            line-height: 1;
+            margin-bottom: 1.25rem;
+            background: linear-gradient(135deg, #fff 30%, var(--accent3));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
+            overflow: visible;
+            display: block;
+            color: transparent;
         }
 
-        .hero p {
-            font-size: clamp(1.1rem, 2vw, 1.4rem);
-            color: var(--text-secondary);
-            margin-bottom: 2.5rem;
+        .hero-title .char {
+            display: inline;
+            opacity: 1;
+            transform: translateY(0px);
+        }
+
+        .hero-desc {
+            font-size: clamp(1rem, 2vw, 1.2rem);
+            color: var(--text2);
+            margin-bottom: 2rem;
             line-height: 1.8;
+            max-width: 560px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0;
+            transform: translateY(20px);
         }
 
-        .cta-button {
-            display: inline-block;
-            padding: 1rem 2.5rem;
-            background: var(--accent);
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: 600;
-            transition: all 0.3s;
-            border: 2px solid transparent;
-        }
-
-        .cta-button:hover {
-            background: transparent;
-            border-color: var(--accent);
-            color: var(--accent);
-            transform: translateY(-2px);
-        }
-
-        /* Background Animation */
-        .bg-grid {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: 
-                linear-gradient(var(--border) 1px, transparent 1px),
-                linear-gradient(90deg, var(--border) 1px, transparent 1px);
-            background-size: 50px 50px;
-            opacity: 0.3;
-            mask-image: radial-gradient(circle at center, black, transparent 70%);
-        }
-
-        /* Projects Section */
-        .projects-section {
-            min-height: 100vh;
-            padding: 6rem 2rem 4rem;
-            background: var(--bg-secondary);
-        }
-
-        .section-header {
-            max-width: 1200px;
-            margin: 0 auto 3rem;
-            text-align: center;
-        }
-
-        .section-header h2 {
-            font-size: clamp(2rem, 5vw, 3rem);
-            margin-bottom: 1rem;
-        }
-
-        .section-header p {
-            color: var(--text-secondary);
-            font-size: 1.1rem;
-        }
-
-        /* Project Grid */
-        .projects-grid {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-            gap: 2rem;
-        }
-
-        .project-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 2rem;
-            transition: all 0.3s;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .project-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background: linear-gradient(90deg, var(--accent), var(--accent-light));
-            transform: scaleX(0);
-            transition: transform 0.3s;
-        }
-
-        .project-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--accent);
-        }
-
-        .project-card:hover::before {
-            transform: scaleX(1);
-        }
-
-        .project-header {
-            margin-bottom: 1rem;
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .project-favicon {
-            width: 32px;
-            height: 32px;
-            border-radius: 6px;
-            flex-shrink: 0;
-            object-fit: cover;
-        }
-
-        .project-name {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--text-primary);
-            margin: 0;
-        }
-
-        .project-description {
-            color: var(--text-secondary);
-            margin-bottom: 1.5rem;
-            line-height: 1.6;
-        }
-
-        .project-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .tag {
-            padding: 0.25rem 0.75rem;
-            background: rgba(59, 130, 246, 0.1);
-            color: var(--accent-light);
-            border-radius: 6px;
-            font-size: 0.85rem;
-            border: 1px solid rgba(59, 130, 246, 0.2);
-        }
-
-        .project-links {
-            display: flex;
-            gap: 1rem;
-        }
-
-        .project-link {
-            flex: 1;
-            padding: 0.75rem;
-            text-align: center;
-            text-decoration: none;
-            border-radius: 6px;
-            font-weight: 600;
-            transition: all 0.3s;
-            font-size: 0.9rem;
-        }
-
-        .link-github {
-            background: transparent;
-            border: 2px solid var(--border);
-            color: var(--text-primary);
-        }
-
-        .link-github:hover {
-            border-color: var(--text-primary);
-            background: rgba(255, 255, 255, 0.05);
-        }
-
-        .link-demo {
-            background: var(--accent);
-            color: white;
-            border: 2px solid transparent;
-        }
-
-        .link-demo:hover {
-            background: transparent;
-            border-color: var(--accent);
-            color: var(--accent);
-        }
-
-        /* Footer */
-        footer {
-            padding: 3rem 2rem;
-            text-align: center;
-            background: var(--bg-primary);
-            border-top: 1px solid var(--border);
-            color: var(--text-secondary);
-        }
-
-        /* Smooth Scroll */
-        html { scroll-behavior: smooth; }
-
-        /* ── Responsive ─────────────────────────────────── */
-
-        /* Tablet: hide desktop links, show hamburger */
-        @media (max-width: 768px) {
-            .nav-links { display: none; }
-            .nav-hamburger { display: flex; }
-
-            .hero {
-                padding-top: 5rem;
-                padding-left: 1.25rem;
-                padding-right: 1.25rem;
-                min-height: 100svh;
-            }
-
-            .hero h1 { font-size: clamp(2rem, 10vw, 3.5rem); }
-
-            .hero p {
-                font-size: 1rem;
-                margin-bottom: 1.75rem;
-            }
-
-            .profile-image {
-                width: 96px;
-                height: 96px;
-            }
-
-            .hero-meta { gap: 0.5rem; }
-
-            .hero-socials {
-                flex-wrap: wrap;
-                gap: 0.6rem;
-            }
-
-            .social-link {
-                flex: 1 1 auto;
-                justify-content: center;
-                min-width: 120px;
-            }
-
-            .cta-button {
-                display: block;
-                text-align: center;
-                padding: 0.9rem 2rem;
-            }
-
-            .projects-section {
-                padding: 5rem 1.25rem 3rem;
-            }
-
-            .projects-grid {
-                grid-template-columns: 1fr;
-                gap: 1.25rem;
-            }
-
-            .project-card { padding: 1.5rem; }
-
-            .section-header {
-                margin-bottom: 2rem;
-            }
-
-            footer { padding: 2rem 1.25rem; }
-        }
-
-        /* Small phones */
-        @media (max-width: 400px) {
-            .nav-content { padding: 0 1.25rem; }
-
-            .hero-badge { font-size: 0.75rem; padding: 0.25rem 0.6rem; }
-
-            .project-links { flex-direction: column; }
-
-            .project-link { flex: unset; }
-        }
-
-        /* Personal / About */
+        /* Badges */
         .hero-meta {
             display: flex;
             justify-content: center;
-            gap: 0.6rem;
+            gap: 0.5rem;
             flex-wrap: wrap;
             margin-bottom: 1.75rem;
+            opacity: 0;
         }
 
         .hero-badge {
             display: flex;
             align-items: center;
             gap: 0.4rem;
-            background: rgba(59, 130, 246, 0.08);
-            border: 1px solid rgba(59, 130, 246, 0.2);
+            background: rgba(59,130,246,0.06);
+            border: 1px solid var(--border2);
             border-radius: 999px;
-            padding: 0.3rem 0.75rem;
+            padding: 0.35rem 0.85rem;
             font-size: 0.82rem;
-            color: var(--text-secondary);
+            color: var(--text2);
+            transition: all 0.25s;
+        }
+
+        .hero-badge:hover {
+            background: rgba(59,130,246,0.12);
+            border-color: rgba(59,130,246,0.4);
+            color: var(--text);
+            transform: translateY(-2px);
         }
 
         .hero-badge svg {
             width: 13px;
             height: 13px;
             flex-shrink: 0;
-            stroke: var(--accent-light);
+            stroke: var(--accent2);
         }
 
+        /* Divider */
+        .hero-divider {
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--accent2), transparent);
+            margin: 0 auto 2rem;
+            border-radius: 2px;
+        }
+
+        /* Socials */
         .hero-socials {
             display: flex;
             justify-content: center;
             gap: 1rem;
             margin-bottom: 2rem;
+            opacity: 0;
+            transform: translateY(20px);
         }
 
         .social-link {
             display: flex;
             align-items: center;
             gap: 0.5rem;
-            padding: 0.55rem 1.2rem;
+            padding: 0.6rem 1.3rem;
             border-radius: 8px;
-            border: 1px solid var(--border);
-            color: var(--text-secondary);
+            border: 1px solid var(--border2);
+            color: var(--text2);
             text-decoration: none;
             font-size: 0.9rem;
             font-weight: 500;
@@ -604,461 +486,1011 @@
 
         .social-link:hover {
             border-color: var(--accent);
-            color: var(--accent-light);
-            background: rgba(59, 130, 246, 0.07);
-            transform: translateY(-2px);
+            color: var(--accent2);
+            background: rgba(59,130,246,0.08);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(59,130,246,0.15);
         }
 
-        .hero-divider {
-            width: 40px;
-            height: 2px;
-            background: linear-gradient(90deg, var(--accent), var(--accent-light));
-            margin: 0 auto 2rem;
+        /* CTA */
+        .cta-wrap {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 0.9rem 2.4rem;
+            background: var(--accent);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 8px;
+            font-family: 'Syne', sans-serif;
+            font-weight: 700;
+            font-size: 0.95rem;
+            letter-spacing: 0.02em;
+            border: 2px solid transparent;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(255,255,255,0.15), transparent);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .cta-button:hover::before { opacity: 1; }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 32px rgba(59,130,246,0.35);
+        }
+
+        /* Scroll indicator */
+        .scroll-hint {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.4rem;
+            color: var(--text2);
+            font-size: 0.75rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            opacity: 0;
+        }
+
+        .scroll-arrow {
+            width: 20px;
+            height: 30px;
+            border: 1.5px solid var(--border2);
+            border-radius: 10px;
+            position: relative;
+        }
+
+        .scroll-arrow::after {
+            content: '';
+            position: absolute;
+            top: 5px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 3px;
+            height: 6px;
+            background: var(--accent2);
             border-radius: 2px;
+            animation: scrollBob 1.6s ease-in-out infinite;
+        }
+
+        @keyframes scrollBob {
+            0%, 100% { opacity: 1; transform: translateX(-50%) translateY(0); }
+            50% { opacity: 0.3; transform: translateX(-50%) translateY(8px); }
+        }
+
+        /* ─── PROJECTS SECTION ────────────────────────────── */
+        .projects-section {
+            position: relative;
+            z-index: 1;
+            padding: 7rem 2rem 5rem;
+            background: linear-gradient(to bottom, var(--bg), var(--bg2) 30%, var(--bg2));
+        }
+
+        /* Subtle diagonal accent line */
+        .projects-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--accent), transparent);
+            opacity: 0.4;
+        }
+
+        .section-header {
+            max-width: 1200px;
+            margin: 0 auto 4rem;
+            text-align: center;
+        }
+
+        .section-label {
+            display: inline-block;
+            font-family: 'Syne', sans-serif;
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--accent2);
+            margin-bottom: 1rem;
+            opacity: 0;
+        }
+
+        .section-header h2 {
+            font-family: 'Syne', sans-serif;
+            font-size: clamp(2rem, 5vw, 3.2rem);
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            margin-bottom: 0.75rem;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .section-header p {
+            color: var(--text2);
+            font-size: 1rem;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        /* ─── PROJECT GRID ────────────────────────────────── */
+        .projects-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 1.5rem;
+        }
+
+        /* Card */
+        .project-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 1.75rem;
+            position: relative;
+            overflow: hidden;
+            transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+            opacity: 0;
+            transform: translateY(40px);
+            cursor: default;
+        }
+
+        /* Top accent bar */
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--accent), var(--accent3));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+
+        /* Hover glow spot */
+        .project-card::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at var(--mx, 50%) var(--my, 50%), rgba(59,130,246,0.06) 0%, transparent 60%);
+            opacity: 0;
+            transition: opacity 0.3s;
+            pointer-events: none;
+        }
+
+        .project-card:hover {
+            border-color: var(--border2);
+            transform: translateY(-6px);
+            box-shadow: 0 20px 60px rgba(5,8,16,0.7), 0 0 0 1px var(--border2);
+        }
+
+        .project-card:hover::before { transform: scaleX(1); }
+        .project-card:hover::after { opacity: 1; }
+
+        .project-header {
+            display: flex;
+            align-items: center;
+            gap: 0.85rem;
+            margin-bottom: 0.85rem;
+        }
+
+        .project-favicon {
+            width: 30px;
+            height: 30px;
+            border-radius: 6px;
+            flex-shrink: 0;
+            object-fit: cover;
+        }
+
+        .project-name {
+            font-family: 'Syne', sans-serif;
+            font-size: 1.15rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            color: var(--text);
+            margin: 0;
+        }
+
+        .project-description {
+            color: var(--text2);
+            font-size: 0.9rem;
+            line-height: 1.65;
+            margin-bottom: 1.25rem;
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .tag {
+            padding: 0.2rem 0.65rem;
+            background: rgba(59,130,246,0.08);
+            color: var(--accent3);
+            border-radius: 5px;
+            font-size: 0.78rem;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            border: 1px solid rgba(59,130,246,0.15);
+        }
+
+        .project-links {
+            display: flex;
+            gap: 0.75rem;
+            margin-top: auto;
+        }
+
+        .project-link {
+            flex: 1;
+            padding: 0.6rem;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 7px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            letter-spacing: 0.02em;
+            transition: all 0.25s;
+        }
+
+        .link-github {
+            background: transparent;
+            border: 1px solid var(--border2);
+            color: var(--text2);
+        }
+
+        .link-github:hover {
+            border-color: rgba(255,255,255,0.3);
+            color: var(--text);
+            background: rgba(255,255,255,0.04);
+        }
+
+        .link-demo {
+            background: var(--accent);
+            color: #fff;
+            border: 1px solid transparent;
+        }
+
+        .link-demo:hover {
+            background: transparent;
+            border-color: var(--accent);
+            color: var(--accent2);
+        }
+
+        /* ─── FOOTER ──────────────────────────────────────── */
+        footer {
+            position: relative;
+            z-index: 1;
+            padding: 3rem 2rem;
+            text-align: center;
+            background: var(--bg);
+            border-top: 1px solid var(--border);
+        }
+
+        .footer-inner {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .footer-logo {
+            font-family: 'Syne', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            background: linear-gradient(135deg, var(--accent2), var(--accent3));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        footer p {
+            color: var(--text2);
+            font-size: 0.85rem;
+        }
+
+        /* ─── RESPONSIVE ──────────────────────────────────── */
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .nav-hamburger { display: flex; }
+
+            .hero {
+                padding-top: 5rem;
+                padding-left: 1.25rem;
+                padding-right: 1.25rem;
+                min-height: 100svh;
+            }
+
+            .hero-socials {
+                flex-wrap: wrap;
+                gap: 0.6rem;
+            }
+
+            .social-link {
+                flex: 1 1 auto;
+                justify-content: center;
+                min-width: 120px;
+            }
+
+            .cta-button {
+                display: block;
+                text-align: center;
+            }
+
+            .projects-section {
+                padding: 5rem 1.25rem 3rem;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+                gap: 1.1rem;
+            }
+
+            .project-card { padding: 1.4rem; }
+
+            .section-header { margin-bottom: 2.5rem; }
+
+            footer { padding: 2rem 1.25rem; }
+
+            .scroll-hint { display: none; }
+        }
+
+        @media (max-width: 400px) {
+            .nav-content { padding: 0 1.25rem; }
+            .hero-badge { font-size: 0.75rem; padding: 0.25rem 0.65rem; }
+            .project-links { flex-direction: column; }
+            .project-link { flex: unset; }
+        }
+
+        /* ─── NUMBER COUNTER ─────────────────────────────── */
+        .stat-row {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-bottom: 2.5rem;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-num {
+            font-family: 'Syne', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--accent2), var(--accent3));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 0.78rem;
+            color: var(--text2);
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            margin-top: 0.3rem;
+        }
+
+        @media (max-width: 400px) {
+            .stat-row { gap: 1.5rem; }
+            .stat-num { font-size: 1.6rem; }
         }
     </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav>
-        <div class="nav-content">
-            <div class="logo">Tomask4</div>
-            <ul class="nav-links">
-                <li><a href="#home" data-lang-key="nav.home">Home</a></li>
-                <li><a href="#projects" data-lang-key="nav.projects">Projects</a></li>
-                <li><a href="https://status.tomask4.nl" target="_blank" data-lang-key="nav.status">Status</a></li>
-                <li><button class="lang-toggle" id="langToggle">NL</button></li>
-            </ul>
-            <button class="nav-hamburger" id="navHamburger" aria-label="Menu openen">
-                <span></span><span></span><span></span>
-            </button>
-        </div>
-        <ul class="nav-drawer" id="navDrawer">
+
+<!-- ─── LOADER ────────────────────────────────────── -->
+<div id="loader">
+    <div class="loader-logo" id="loaderLogo">Tomask4</div>
+    <div class="loader-bar-wrap">
+        <div class="loader-bar" id="loaderBar"></div>
+    </div>
+</div>
+
+<!-- ─── PARTICLES ─────────────────────────────────── -->
+<canvas id="particle-canvas"></canvas>
+
+<!-- ─── NAV ──────────────────────────────────────── -->
+<nav id="mainNav">
+    <div class="nav-content">
+        <a href="#home" class="logo">Tomask4</a>
+        <ul class="nav-links">
             <li><a href="#home" data-lang-key="nav.home">Home</a></li>
             <li><a href="#projects" data-lang-key="nav.projects">Projects</a></li>
             <li><a href="https://status.tomask4.nl" target="_blank" data-lang-key="nav.status">Status</a></li>
-            <li><button class="lang-toggle" id="langToggleMobile">NL</button></li>
+            <li><button class="lang-toggle" id="langToggle">NL</button></li>
         </ul>
-    </nav>
+        <button class="nav-hamburger" id="navHamburger" aria-label="Menu openen">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+    <ul class="nav-drawer" id="navDrawer">
+        <li><a href="#home" data-lang-key="nav.home">Home</a></li>
+        <li><a href="#projects" data-lang-key="nav.projects">Projects</a></li>
+        <li><a href="https://status.tomask4.nl" target="_blank" data-lang-key="nav.status">Status</a></li>
+        <li><button class="lang-toggle" id="langToggleMobile">NL</button></li>
+    </ul>
+</nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="bg-grid"></div>
-        <div class="hero-content">
-            <img src="https://raw.githubusercontent.com/Tomask4/tomask4.github.io/refs/heads/main/Logo.png" alt="Tomask4" class="profile-image">
-            <h1 data-lang-key="hero.title">Tomask4</h1>
-            <p data-lang-key="hero.description">I build sites because I enjoy building them — web apps, Firebase projects and Minecraft servers, just for the fun of it.</p>
+<!-- ─── HERO ─────────────────────────────────────── -->
+<section id="home" class="hero">
+    <div class="hero-grid"></div>
+    <div class="hero-orb hero-orb-1"></div>
+    <div class="hero-orb hero-orb-2"></div>
 
-            <!-- Personal badges -->
-            <div class="hero-meta">
-                <span class="hero-badge">
-                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-                    <span data-lang-key="badge.location">Amsterdam, NL</span>
-                </span>
-                <span class="hero-badge">
-                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
-                    <span data-lang-key="badge.hobbyist">Hobbyist dev</span>
-                </span>
-                <span class="hero-badge">
-                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-                    <span data-lang-key="badge.minecraft">Minecraft</span>
-                </span>
-                <span class="hero-badge">
-                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg>
-                    <span data-lang-key="badge.firebase">Firebase &amp; JS</span>
-                </span>
+    <div class="hero-content">
+        <div class="profile-wrap" id="profileWrap">
+            <div class="profile-ring"></div>
+            <img src="https://raw.githubusercontent.com/Tomask4/tomask4.github.io/refs/heads/main/Logo.png"
+                 alt="Tomask4" class="profile-image">
+        </div>
+
+        <h1 class="hero-title" id="heroTitle">
+            <!-- split by JS -->
+        </h1>
+
+        <p class="hero-desc" id="heroDesc" data-lang-key="hero.description">
+            I build sites because I enjoy building them — web apps, Firebase projects and Minecraft servers, just for the fun of it.
+        </p>
+
+        <div class="hero-meta" id="heroMeta">
+            <span class="hero-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                <span data-lang-key="badge.location">Amsterdam, NL</span>
+            </span>
+            <span class="hero-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+                <span data-lang-key="badge.hobbyist">Hobbyist dev</span>
+            </span>
+            <span class="hero-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                <span data-lang-key="badge.minecraft">Minecraft</span>
+            </span>
+            <span class="hero-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg>
+                <span data-lang-key="badge.firebase">Firebase &amp; JS</span>
+            </span>
+        </div>
+
+        <div class="stat-row" id="statRow">
+            <div class="stat-item">
+                <span class="stat-num" id="statProjects">0</span>
+                <span class="stat-label" data-lang-key="stat.projects">Projects</span>
             </div>
-
-            <div class="hero-divider"></div>
-
-            <!-- Social links -->
-            <div class="hero-socials">
-                <a href="https://github.com/Tomask4" target="_blank" class="social-link">
-                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-                    GitHub
-                </a>
-                <a href="https://modrinth.com/user/TomasK4" target="_blank" class="social-link">
-                    <svg viewBox="0 0 590 591" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="width:17px;height:17px;flex-shrink:0;">
-                        <path d="m29 424.4 188.2-112.95-17.15-45.48 53.75-55.21 67.93-14.64 19.67 24.21-31.32 31.72-27.3 8.6-19.52 20.05 9.56 26.6 19.4 20.6 27.36-7.28 19.47-21.38 42.51-13.47 12.67 28.5-43.87 53.78-73.5 23.27-32.97-36.7L55.06 467.94C46.1 456.41 35.67 440.08 29 424.4Zm543.03-230.25-149.5 40.32c8.24 21.92 10.95 34.8 13.23 49l149.23-40.26c-2.38-15.94-6.65-32.17-12.96-49.06Z"/>
-                        <path d="M51.28 316.13c10.59 125 115.54 223.3 243.27 223.3 96.51 0 180.02-56.12 219.63-137.46l48.61 16.83c-46.78 101.34-149.35 171.75-268.24 171.75C138.6 590.55 10.71 469.38 0 316.13h51.28ZM.78 265.24C15.86 116.36 141.73 0 294.56 0c162.97 0 295.28 132.31 295.28 295.28 0 26.14-3.4 51.49-9.8 75.63l-48.48-16.78a244.28 244.28 0 0 0 7.15-58.85c0-134.75-109.4-244.15-244.15-244.15-124.58 0-227.49 93.5-242.32 214.11H.8Z"/>
-                        <path d="M293.77 153.17c-78.49.07-142.2 63.83-142.2 142.34 0 78.56 63.79 142.34 142.35 142.34 3.98 0 7.93-.16 11.83-.49l14.22 49.76a194.65 194.65 0 0 1-26.05 1.74c-106.72 0-193.36-86.64-193.36-193.35 0-106.72 86.64-193.35 193.36-193.35 2.64 0 5.28.05 7.9.16l-8.05 50.85Zm58.2-42.13c78.39 24.67 135.3 97.98 135.3 184.47 0 80.07-48.77 148.83-118.2 178.18l-14.17-49.55c48.08-22.85 81.36-71.89 81.36-128.63 0-60.99-38.44-113.07-92.39-133.32l8.1-51.15Z"/>
-                    </svg>
-                    Modrinth
-                </a>
+            <div class="stat-item">
+                <span class="stat-num" id="statYear">0</span>
+                <span class="stat-label" data-lang-key="stat.since">Since</span>
             </div>
+            <div class="stat-item">
+                <span class="stat-num" id="statTech">0</span>
+                <span class="stat-label" data-lang-key="stat.tech">Technologies</span>
+            </div>
+        </div>
 
+        <div class="hero-divider" id="heroDivider"></div>
+
+        <div class="hero-socials" id="heroSocials">
+            <a href="https://github.com/Tomask4" target="_blank" class="social-link">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                GitHub
+            </a>
+            <a href="https://modrinth.com/user/TomasK4" target="_blank" class="social-link">
+                <svg viewBox="0 0 590 591" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="width:17px;height:17px;flex-shrink:0;">
+                    <path d="m29 424.4 188.2-112.95-17.15-45.48 53.75-55.21 67.93-14.64 19.67 24.21-31.32 31.72-27.3 8.6-19.52 20.05 9.56 26.6 19.4 20.6 27.36-7.28 19.47-21.38 42.51-13.47 12.67 28.5-43.87 53.78-73.5 23.27-32.97-36.7L55.06 467.94C46.1 456.41 35.67 440.08 29 424.4Zm543.03-230.25-149.5 40.32c8.24 21.92 10.95 34.8 13.23 49l149.23-40.26c-2.38-15.94-6.65-32.17-12.96-49.06Z"/>
+                    <path d="M51.28 316.13c10.59 125 115.54 223.3 243.27 223.3 96.51 0 180.02-56.12 219.63-137.46l48.61 16.83c-46.78 101.34-149.35 171.75-268.24 171.75C138.6 590.55 10.71 469.38 0 316.13h51.28ZM.78 265.24C15.86 116.36 141.73 0 294.56 0c162.97 0 295.28 132.31 295.28 295.28 0 26.14-3.4 51.49-9.8 75.63l-48.48-16.78a244.28 244.28 0 0 0 7.15-58.85c0-134.75-109.4-244.15-244.15-244.15-124.58 0-227.49 93.5-242.32 214.11H.8Z"/>
+                    <path d="M293.77 153.17c-78.49.07-142.2 63.83-142.2 142.34 0 78.56 63.79 142.34 142.35 142.34 3.98 0 7.93-.16 11.83-.49l14.22 49.76a194.65 194.65 0 0 1-26.05 1.74c-106.72 0-193.36-86.64-193.36-193.35 0-106.72 86.64-193.35 193.36-193.35 2.64 0 5.28.05 7.9.16l-8.05 50.85Zm58.2-42.13c78.39 24.67 135.3 97.98 135.3 184.47 0 80.07-48.77 148.83-118.2 178.18l-14.17-49.55c48.08-22.85 81.36-71.89 81.36-128.63 0-60.99-38.44-113.07-92.39-133.32l8.1-51.15Z"/>
+                </svg>
+                Modrinth
+            </a>
+        </div>
+
+        <div class="cta-wrap" id="ctaWrap">
             <a href="#projects" class="cta-button" data-lang-key="hero.cta">View Projects</a>
         </div>
-    </section>
+    </div>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects-section">
-        <div class="section-header">
-            <h2 data-lang-key="projects.title">Projects</h2>
-            <p data-lang-key="projects.subtitle">A collection of projects I've worked on</p>
-        </div>
-        <div class="projects-grid" id="projectsContainer"></div>
-    </section>
+    <div class="scroll-hint" id="scrollHint">
+        <div class="scroll-arrow"></div>
+        <span>scroll</span>
+    </div>
+</section>
 
-    <!-- Footer -->
-    <footer>
+<!-- ─── PROJECTS ──────────────────────────────────── -->
+<section id="projects" class="projects-section">
+    <div class="section-header" id="sectionHeader">
+        <div class="section-label" id="sectionLabel">— WORK —</div>
+        <h2 data-lang-key="projects.title">Projects</h2>
+        <p data-lang-key="projects.subtitle">A collection of projects I've worked on</p>
+    </div>
+    <div class="projects-grid" id="projectsContainer"></div>
+</section>
+
+<!-- ─── FOOTER ────────────────────────────────────── -->
+<footer>
+    <div class="footer-inner">
+        <div class="footer-logo">Tomask4</div>
         <p data-lang-key="footer.text">© 2026 Tomask4</p>
-    </footer>
-    <feedback-widget></feedback-widget>
-    <script src="https://gist.githack.com/Tomask4/15b3baa4426559822ebb0212bb7f8a78/raw/feedback-widget.js"></script>
+    </div>
+</footer>
 
-    <script>
-        // Language translations
-        const translations = {
-            en: {
-                'nav.home': 'Home',
-                'nav.projects': 'Projects',
-                'nav.status': 'Status',
-                'hero.title': 'Tomask4',
-                'hero.description': 'I build sites because I enjoy building them — web apps, Firebase projects and Minecraft servers, just for the fun of it.',
-                'hero.cta': 'View Projects',
-                'badge.location': 'Amsterdam, NL',
-                'badge.hobbyist': 'Hobbyist dev',
-                'badge.minecraft': 'Minecraft',
-                'badge.firebase': 'Firebase & JS',
-                'projects.title': 'Projects',
-                'projects.subtitle': 'A collection of projects I\'ve worked on',
-                'projects.demo': 'Visit',
-                'footer.text': '© 2026 Tomask4'
-            },
-            nl: {
-                'nav.home': 'Home',
-                'nav.projects': 'Projecten',
-                'nav.status': 'Status',
-                'hero.title': 'Tomask4',
-                'hero.description': 'Ik bouw sites omdat ik het leuk vind — webapps, Firebase-projecten en Minecraft-servers, gewoon omdat ik het kan.',
-                'hero.cta': 'Bekijk Projecten',
-                'badge.location': 'Amsterdam, NL',
-                'badge.hobbyist': 'Hobbyist dev',
-                'badge.minecraft': 'Minecraft',
-                'badge.firebase': 'Firebase & JS',
-                'projects.title': 'Projecten',
-                'projects.subtitle': 'Een collectie van projecten waar ik aan heb gewerkt',
-                'projects.demo': 'Bezoek',
-                'footer.text': '© 2026 Tomask4'
-            }
-        };
+<feedback-widget></feedback-widget>
+<script src="https://gist.githack.com/Tomask4/15b3baa4426559822ebb0212bb7f8a78/raw/feedback-widget.js"></script>
 
-        const projects = [
-            {
-                name: "Encryptor",
-                description: {
-                    en: "An encryption tool that allows you to encrypt and decrypt text using various algorithms.",
-                    nl: "Een encryptietool waarmee je tekst kunt versleutelen en ontsleutelen met verschillende algoritmen."
-                },
-                tags: ["HTML", "CSS", "JavaScript"],
-                github: "https://github.com/Tomask4/encryptor",
-                demo: "https://www.tomask4.nl/encryptor/"
-            },
-            {
-                name: "DevTools",
-                description: {
-                    en: "A collection of developer tools including a JSON formatter, Regex tester and more.",
-                    nl: "Een verzameling ontwikkelaarshulpmiddelen inclusief JSON formatter, Regex tester en meer."
-                },
-                tags: ["HTML", "CSS", "JavaScript"],
-                github: "https://github.com/Tomask4/devtools",
-                demo: "https://www.tomask4.nl/devtools/"
-            },
-            {
-                name: "ChatDPT [fake]",
-                description: {
-                    en: "A simple chat interface that simulates a conversation with an AI.",
-                    nl: "Een eenvoudige chatinterface die een gesprek met een AI simuleert."
-                },
-                tags: ["HTML", "CSS", "JavaScript"],
-                github: "https://github.com/Tomask4/ChatDPT-fake-",
-                demo: "https://www.tomask4.nl/ChatDPT-fake-/"
-            },
-            {
-                name: "SkipSite",
-                description: {
-                    en: "A fun game where you have to skip ads by doing various tasks.",
-                    nl: "Een leuk spel waarbij je advertenties moet overslaan door verschillende taken uit te voeren."
-                },
-                tags: ["HTML", "CSS", "Javascript"],
-                github: "https://github.com/Tomask4/skipsite",
-                demo: "https://www.tomask4.nl/skipsite/"
-            },
-            {
-                name: "Ugliest site",
-                description: {
-                    en: "A project that showcases the ugliest website design possible, just for fun!",
-                    nl: "Een project dat het lelijkste websiteontwerp toont dat mogelijk is, gewoon voor de lol!"
-                },
-                tags: ["HTML", "CSS", "JavaScript"],
-                github: "https://github.com/Tomask4/Lelijkste-site",
-                demo: "https://www.tomask4.nl/Lelijkste-site/"
-            },
-            {
-                name: "Time PopUp",
-                description: {
-                    en: "A simple JavaScript project that shows a popup with the current time.",
-                    nl: "Een eenvoudig JavaScript-project dat een popup toont met de huidige tijd."
-                },
-                tags: ["HTML", "CSS", "JavaScript"],
-                github: "https://github.com/Tomask4/time",
-                demo: "https://www.tomask4.nl/time/"
-            },
-            {
-                name: "Kahoot Flooder",
-                description: {
-                    en: "A tool that allows you to flood a Kahoot game with fake players.",
-                    nl: "Een tool waarmee je een Kahoot-spel kunt overspoelen met nepspelers."
-                },
-                tags: ["HTML", "CSS", "JavaScript", "Node.js", "Kahoot API"],
-                github: "https://github.com/Tomask4/kahoot-flooder",
-                demo: "https://kahoot-flooder-t7h4.onrender.com/"
-            },
-            {
-                name: "Scoreboard",
-                description: {
-                    en: "A simple scoreboard application that allows you to keep track of scores in a game.",
-                    nl: "Een eenvoudige scorebord-applicatie waarmee je scores in een spel kunt bijhouden."
-                },
-                tags: ["HTML", "CSS", "JavaScript"],
-                github: "https://github.com/Tomask4/scoreboard",
-                demo: "https://www.tomask4.nl/scoreboard/"
-            },
-            {
-                name: "Password Game",
-                description: {
-                    en: "A recreation of the neal.fun password game where you have to create a password that needs to meet a lot of rules",
-                    nl: "Een recreatie van de neal.fun wachtwoord game waar je een wachtwoord moet maken dat moet voldoen aan veel regels"
-                },
-                tags: ["HTML", "CSS", "JavaScript"],
-                github: "https://github.com/Tomask4/Password-Game",
-                demo: "https://www.tomask4.nl/Password-Game/"
-            },
-            {
-                name: "ShortURL",
-                description: {
-                    en: "A site where you can generate a url that redirects to a url you enter and you can see the traffic there",
-                    nl: "Een website waar je een link kan genereren die redirect naar jouw link en je dan het verkeer kan zien"
-                },
-                tags: ["HTML", "CSS", "JavaScript", "Firebase"],
-                github: "https://github.com/Tomask4/shorturl",
-                demo: "https://www.tomask4.nl/shorturl/"
-            },
-            {
-                name: "AuthSite",
-                description: {
-                    en: "A simple website where the admin can make keys and the user can check if the keys are valid",
-                    nl: "Een simplele website waar de admin sleutels kan maken en de user kan kijken of ze geldig zijn"
-                },
-                tags: ["HTML", "CSS", "JavaScript", "Firebase"],
-                github: "https://github.com/Tomask4/AuthSite",
-                demo: "https://www.tomask4.nl/AuthSite/"
-            },
-            {
-                name: "The List",
-                description: {
-                    en: "A website where everyone can add items to 'The list'",
-                    nl: "Een website waar iedereen items kan toevoegen aan 'De lijst'"
-                },
-                tags: ["HTML", "CSS", "JavaScript", "Firebase"],
-                github: "https://github.com/Tomask4/thelist",
-                demo: "https://www.tomask4.nl/thelist/"
-            },
-            {
-                name: "Klasplattegrond",
-                description: {
-                    en: "A website where you can make mappings for where students should sit in the classroom",
-                    nl: "Een website waar je plattegronden kunt maken voor waar leerlingen moeten zitten in de klas"
-                },
-                tags: ["HTML", "CSS", "JavaScript", "Firebase"],
-                github: "https://github.com/Tomask4/klasplattegrond",
-                demo: "https://www.tomask4.nl/klasplattegrond/"
-            },
-            {
-                name: "Palette Generator",
-                description: {
-                    en: "A full-screen tool to generate color palettes and fonts with a live website preview mode",
-                    nl: "Een schermvullende tool om kleurenpaletten en fonts te genereren inclusief een live website preview-modus"
-                },
-                tags: ["HTML", "CSS", "JavaScript", "Google Fonts API"],
-                github: "https://github.com/Tomask4/PaletteGenerator/",
-                demo: "https://www.tomask4.nl/PaletteGenerator/"
-            },
-            {
-                name: "Multi-Tool Dashboard",
-                description: {
-                    en: "A modern full-screen multi-tool dashboard with Firebase Google authentication, featuring a ToDo app, converters, code beautifiers, themes, and curated developer links",
-                    nl: "Een modern schermvullend multi-tool dashboard met Firebase Google-authenticatie, inclusief een ToDo-app, converters, code beautifiers, thema's en handige developer-links"
-                },
-                tags: [
-                    "HTML",
-                    "CSS",
-                    "JavaScript",
-                    "Firebase"
-                ],
-                demo: "https://toolbox-a7d0d.web.app/"
-            },
-            {
-                name: "Template Studio",
-                description: {
-                    en: "An interactive HTML/CSS/JS component gallery with 30+ ready-to-use templates and a live theme customizer that automatically adapts your copied code to your chosen colors and fonts",
-                    nl: "Een interactieve HTML/CSS/JS component gallery met 30+ kant-en-klare templates en een live theme customizer die automatisch je gekopieerde code aanpast aan jouw gekozen kleuren en fonts"
-                },
-                tags: [
-                    "HTML",
-                    "CSS",
-                    "JavaScript"
-                ],
-                github: "https://github.com/Tomask4/TemplateStudio/",
-                demo: "https://www.tomask4.nl/TemplateStudio/"
-            },
-            {
-                name: "Favicon Generator",
-                description: {
-                    en: "Generate favicons in all sizes with permanent URLs",
-                    nl: "Genereer favicons in alle formaten met permanente URLs"
-                },
-                tags: ["HTML", "CSS", "JavaScript", "Canvas API"],
-                github: "https://github.com/Tomask4/FaviconGenerator",
-                demo: "https://www.tomask4.nl/FaviconGenerator/"
-            },
-            {
-                name: "Kanaal Chat",
-                description: {
-                    en: "Self-hosted real-time chat — connect with everyone on your own WebSocket server",
-                    nl: "Zelf-gehoste realtime chat — communiceer met iedereen op je eigen WebSocket server"
-                },
-                tags: ["HTML", "CSS", "JavaScript", "WebSocket", "Node.js"],
-                github: "https://github.com/tomask4/chatserver/",
-                demo: "https://www.tomask4.nl/chatserver/"
-            },
-            {
-                name: "Scriptsite",
-                description: {
-                    en: "A collection of Google Apps Scripts you can browse, copy, and download directly from the browser",
-                    nl: "Een verzameling Google Apps Scripts die je direct in de browser kunt bekijken, kopiëren en downloaden"
-                },
-                tags: ["Google Apps Script", "HTML"],
-                github: "https://github.com/Tomask4/scriptsite",
-                demo: "https://www.tomask4.nl/scriptsite/"
-            },
-            {
-                name: "Notes",
-                description: {
-                    en: "A minimalist notes website",
-                    nl: "Een minimalistische notities website"
-                },
-                tags: ["Firestore DB", "Firebase Auth", "HTML"],
-                github: "https://github.com/Tomask4/notes",
-                demo: "https://www.tomask4.nl/notes/"
-            }
-        ];
+<script>
+// ─── DATA ─────────────────────────────────────────
+const translations = {
+    en: {
+        'nav.home': 'Home', 'nav.projects': 'Projects', 'nav.status': 'Status',
+        'hero.title': 'Tomask4',
+        'hero.description': 'I build sites because I enjoy building them — web apps, Firebase projects and Minecraft servers, just for the fun of it.',
+        'hero.cta': 'View Projects',
+        'badge.location': 'Amsterdam, NL', 'badge.hobbyist': 'Hobbyist dev',
+        'badge.minecraft': 'Minecraft', 'badge.firebase': 'Firebase & JS',
+        'stat.projects': 'Projects', 'stat.since': 'Since', 'stat.tech': 'Technologies',
+        'projects.title': 'Projects',
+        'projects.subtitle': "A collection of projects I've worked on",
+        'projects.demo': 'Visit', 'footer.text': '© 2026 Tomask4'
+    },
+    nl: {
+        'nav.home': 'Home', 'nav.projects': 'Projecten', 'nav.status': 'Status',
+        'hero.title': 'Tomask4',
+        'hero.description': 'Ik bouw sites omdat ik het leuk vind — webapps, Firebase-projecten en Minecraft-servers, gewoon omdat ik het kan.',
+        'hero.cta': 'Bekijk Projecten',
+        'badge.location': 'Amsterdam, NL', 'badge.hobbyist': 'Hobbyist dev',
+        'badge.minecraft': 'Minecraft', 'badge.firebase': 'Firebase & JS',
+        'stat.projects': 'Projecten', 'stat.since': 'Sinds', 'stat.tech': 'Technologieën',
+        'projects.title': 'Projecten',
+        'projects.subtitle': 'Een collectie van projecten waar ik aan heb gewerkt',
+        'projects.demo': 'Bezoek', 'footer.text': '© 2026 Tomask4'
+    }
+};
 
-        // Reverse the projects array
-        const reversedProjects = [...projects].reverse();
+const projects = [
+    { name: "Encryptor", description: { en: "An encryption tool that allows you to encrypt and decrypt text using various algorithms.", nl: "Een encryptietool waarmee je tekst kunt versleutelen en ontsleutelen met verschillende algoritmen." }, tags: ["HTML","CSS","JavaScript"], github: "https://github.com/Tomask4/encryptor", demo: "https://www.tomask4.nl/encryptor/" },
+    { name: "DevTools", description: { en: "A collection of developer tools including a JSON formatter, Regex tester and more.", nl: "Een verzameling ontwikkelaarshulpmiddelen inclusief JSON formatter, Regex tester en meer." }, tags: ["HTML","CSS","JavaScript"], github: "https://github.com/Tomask4/devtools", demo: "https://www.tomask4.nl/devtools/" },
+    { name: "ChatDPT [fake]", description: { en: "A simple chat interface that simulates a conversation with an AI.", nl: "Een eenvoudige chatinterface die een gesprek met een AI simuleert." }, tags: ["HTML","CSS","JavaScript"], github: "https://github.com/Tomask4/ChatDPT-fake-", demo: "https://www.tomask4.nl/ChatDPT-fake-/" },
+    { name: "SkipSite", description: { en: "A fun game where you have to skip ads by doing various tasks.", nl: "Een leuk spel waarbij je advertenties moet overslaan door verschillende taken uit te voeren." }, tags: ["HTML","CSS","Javascript"], github: "https://github.com/Tomask4/skipsite", demo: "https://www.tomask4.nl/skipsite/" },
+    { name: "Ugliest site", description: { en: "A project that showcases the ugliest website design possible, just for fun!", nl: "Een project dat het lelijkste websiteontwerp toont dat mogelijk is, gewoon voor de lol!" }, tags: ["HTML","CSS","JavaScript"], github: "https://github.com/Tomask4/Lelijkste-site", demo: "https://www.tomask4.nl/Lelijkste-site/" },
+    { name: "Time PopUp", description: { en: "A simple JavaScript project that shows a popup with the current time.", nl: "Een eenvoudig JavaScript-project dat een popup toont met de huidige tijd." }, tags: ["HTML","CSS","JavaScript"], github: "https://github.com/Tomask4/time", demo: "https://www.tomask4.nl/time/" },
+    { name: "Kahoot Flooder", description: { en: "A tool that allows you to flood a Kahoot game with fake players.", nl: "Een tool waarmee je een Kahoot-spel kunt overspoelen met nepspelers." }, tags: ["HTML","CSS","JavaScript","Node.js","Kahoot API"], github: "https://github.com/Tomask4/kahoot-flooder", demo: "https://kahoot-flooder-t7h4.onrender.com/" },
+    { name: "Scoreboard", description: { en: "A simple scoreboard application that allows you to keep track of scores in a game.", nl: "Een eenvoudige scorebord-applicatie waarmee je scores in een spel kunt bijhouden." }, tags: ["HTML","CSS","JavaScript"], github: "https://github.com/Tomask4/scoreboard", demo: "https://www.tomask4.nl/scoreboard/" },
+    { name: "Password Game", description: { en: "A recreation of the neal.fun password game where you have to create a password that needs to meet a lot of rules.", nl: "Een recreatie van de neal.fun wachtwoord game waar je een wachtwoord moet maken dat moet voldoen aan veel regels." }, tags: ["HTML","CSS","JavaScript"], github: "https://github.com/Tomask4/Password-Game", demo: "https://www.tomask4.nl/Password-Game/" },
+    { name: "ShortURL", description: { en: "A site where you can generate a url that redirects to a url you enter and you can see the traffic there.", nl: "Een website waar je een link kan genereren die redirect naar jouw link en je dan het verkeer kan zien." }, tags: ["HTML","CSS","JavaScript","Firebase"], github: "https://github.com/Tomask4/shorturl", demo: "https://www.tomask4.nl/shorturl/" },
+    { name: "AuthSite", description: { en: "A simple website where the admin can make keys and the user can check if the keys are valid.", nl: "Een simpele website waar de admin sleutels kan maken en de user kan kijken of ze geldig zijn." }, tags: ["HTML","CSS","JavaScript","Firebase"], github: "https://github.com/Tomask4/AuthSite", demo: "https://www.tomask4.nl/AuthSite/" },
+    { name: "The List", description: { en: "A website where everyone can add items to 'The list'.", nl: "Een website waar iedereen items kan toevoegen aan 'De lijst'." }, tags: ["HTML","CSS","JavaScript","Firebase"], github: "https://github.com/Tomask4/thelist", demo: "https://www.tomask4.nl/thelist/" },
+    { name: "Klasplattegrond", description: { en: "A website where you can make mappings for where students should sit in the classroom.", nl: "Een website waar je plattegronden kunt maken voor waar leerlingen moeten zitten in de klas." }, tags: ["HTML","CSS","JavaScript","Firebase"], github: "https://github.com/Tomask4/klasplattegrond", demo: "https://www.tomask4.nl/klasplattegrond/" },
+    { name: "Palette Generator", description: { en: "A full-screen tool to generate color palettes and fonts with a live website preview mode.", nl: "Een schermvullende tool om kleurenpaletten en fonts te genereren inclusief een live website preview-modus." }, tags: ["HTML","CSS","JavaScript","Google Fonts API"], github: "https://github.com/Tomask4/PaletteGenerator/", demo: "https://www.tomask4.nl/PaletteGenerator/" },
+    { name: "Multi-Tool Dashboard", description: { en: "A modern full-screen multi-tool dashboard with Firebase Google authentication, featuring a ToDo app, converters, code beautifiers, themes, and curated developer links.", nl: "Een modern schermvullend multi-tool dashboard met Firebase Google-authenticatie, inclusief een ToDo-app, converters, code beautifiers, thema's en handige developer-links." }, tags: ["HTML","CSS","JavaScript","Firebase"], demo: "https://toolbox-a7d0d.web.app/" },
+    { name: "Template Studio", description: { en: "An interactive HTML/CSS/JS component gallery with 30+ ready-to-use templates and a live theme customizer that automatically adapts your copied code to your chosen colors and fonts.", nl: "Een interactieve HTML/CSS/JS component gallery met 30+ kant-en-klare templates en een live theme customizer die automatisch je gekopieerde code aanpast aan jouw gekozen kleuren en fonts." }, tags: ["HTML","CSS","JavaScript"], github: "https://github.com/Tomask4/TemplateStudio/", demo: "https://www.tomask4.nl/TemplateStudio/" },
+    { name: "Favicon Generator", description: { en: "Generate favicons in all sizes with permanent URLs.", nl: "Genereer favicons in alle formaten met permanente URLs." }, tags: ["HTML","CSS","JavaScript","Canvas API"], github: "https://github.com/Tomask4/FaviconGenerator", demo: "https://www.tomask4.nl/FaviconGenerator/" },
+    { name: "Kanaal Chat", description: { en: "Self-hosted real-time chat — connect with everyone on your own WebSocket server.", nl: "Zelf-gehoste realtime chat — communiceer met iedereen op je eigen WebSocket server." }, tags: ["HTML","CSS","JavaScript","WebSocket","Node.js"], github: "https://github.com/tomask4/chatserver/", demo: "https://www.tomask4.nl/chatserver/" },
+    { name: "Scriptsite", description: { en: "A collection of Google Apps Scripts you can browse, copy, and download directly from the browser.", nl: "Een verzameling Google Apps Scripts die je direct in de browser kunt bekijken, kopiëren en downloaden." }, tags: ["Google Apps Script","HTML"], github: "https://github.com/Tomask4/scriptsite", demo: "https://www.tomask4.nl/scriptsite/" },
+    { name: "Notes", description: { en: "A minimalist notes website.", nl: "Een minimalistische notities website." }, tags: ["Firestore DB","Firebase Auth","HTML"], github: "https://github.com/Tomask4/notes", demo: "https://www.tomask4.nl/notes/" }
+];
 
-        // Current language (default English)
-        let currentLang = 'en';
+const reversedProjects = [...projects].reverse();
+let currentLang = 'en';
 
-        // Function to get favicon URL from a website using DuckDuckGo's service
-        function getFaviconUrl(url) {
-            try {
-                const hostname = new URL(url).hostname;
-                return `https://icons.duckduckgo.com/ip3/${hostname}.ico`;
-            } catch {
-                return null;
-            }
-        }
+// ─── PARTICLE CANVAS ──────────────────────────────
+(function initParticles() {
+    const canvas = document.getElementById('particle-canvas');
+    const ctx = canvas.getContext('2d');
+    let W, H, particles = [];
+    const COUNT = 55;
 
-        // Update all text content based on language
-        function updateLanguage(lang) {
-            currentLang = lang;
-            
-            // Update all elements with data-lang-key attribute
-            document.querySelectorAll('[data-lang-key]').forEach(element => {
-                const key = element.getAttribute('data-lang-key');
-                if (translations[lang][key]) {
-                    element.textContent = translations[lang][key];
+    function resize() {
+        W = canvas.width = window.innerWidth;
+        H = canvas.height = window.innerHeight;
+    }
+
+    function Particle() {
+        this.reset();
+    }
+    Particle.prototype.reset = function () {
+        this.x = Math.random() * W;
+        this.y = Math.random() * H;
+        this.r = Math.random() * 1.2 + 0.3;
+        this.vx = (Math.random() - 0.5) * 0.25;
+        this.vy = (Math.random() - 0.5) * 0.25;
+        this.alpha = Math.random() * 0.4 + 0.05;
+    };
+
+    function initParticlesArr() {
+        particles = [];
+        for (let i = 0; i < COUNT; i++) particles.push(new Particle());
+    }
+
+    function draw() {
+        ctx.clearRect(0, 0, W, H);
+        particles.forEach(p => {
+            p.x += p.vx;
+            p.y += p.vy;
+            if (p.x < 0 || p.x > W || p.y < 0 || p.y > H) p.reset();
+            ctx.beginPath();
+            ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+            ctx.fillStyle = `rgba(96,165,250,${p.alpha})`;
+            ctx.fill();
+        });
+
+        // Connect nearby
+        for (let i = 0; i < particles.length; i++) {
+            for (let j = i + 1; j < particles.length; j++) {
+                const dx = particles[i].x - particles[j].x;
+                const dy = particles[i].y - particles[j].y;
+                const d = Math.sqrt(dx * dx + dy * dy);
+                if (d < 120) {
+                    ctx.beginPath();
+                    ctx.moveTo(particles[i].x, particles[i].y);
+                    ctx.lineTo(particles[j].x, particles[j].y);
+                    ctx.strokeStyle = `rgba(96,165,250,${0.07 * (1 - d / 120)})`;
+                    ctx.lineWidth = 0.6;
+                    ctx.stroke();
                 }
-            });
-
-            // Update both language toggle buttons
-            document.getElementById('langToggle').textContent = lang === 'en' ? 'NL' : 'EN';
-            document.getElementById('langToggleMobile').textContent = lang === 'en' ? 'NL' : 'EN';
-
-            // Re-render projects with new language
-            renderProjects();
+            }
         }
+        requestAnimationFrame(draw);
+    }
 
-        // Render projects
-        function renderProjects() {
-            const container = document.getElementById('projectsContainer');
-            container.innerHTML = ''; // Clear existing projects
-            
-            reversedProjects.forEach(project => {
-                const card = document.createElement('div');
-                card.className = 'project-card';
-                
-                const tagsHTML = project.tags.map(tag => `<span class="tag">${tag}</span>`).join('');
-                
-                const linksHTML = `
-                    ${project.github ? `<a href="${project.github}" target="_blank" class="project-link link-github">GitHub</a>` : ''}
-                    ${project.demo ? `<a href="${project.demo}" target="_blank" class="project-link link-demo">${translations[currentLang]['projects.demo']}</a>` : ''}
-                `;
+    resize();
+    initParticlesArr();
+    draw();
+    window.addEventListener('resize', () => { resize(); initParticlesArr(); });
+})();
 
-                // Get favicon URL or use fallback
-                const faviconUrl = project.demo ? getFaviconUrl(project.demo) : null;
-                const faviconHTML = faviconUrl 
-                    ? `<img src="${faviconUrl}" alt="${project.name}" class="project-favicon" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22%233b82f6%22%3E%3Cpath d=%22M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z%22/%3E%3C/svg%3E'">` 
-                    : `<img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%233b82f6'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z'/%3E%3C/svg%3E" alt="Default icon" class="project-favicon">`;
-                
-                card.innerHTML = `
-                    <div class="project-header">
-                        ${faviconHTML}
-                        <h3 class="project-name">${project.name}</h3>
-                    </div>
-                    <p class="project-description">${project.description[currentLang]}</p>
-                    <div class="project-tags">${tagsHTML}</div>
-                    <div class="project-links">${linksHTML}</div>
-                `;
-                
-                container.appendChild(card);
+// ─── CARD MOUSE GLOW ──────────────────────────────
+function attachCardGlow() {
+    document.querySelectorAll('.project-card').forEach(card => {
+        card.addEventListener('mousemove', e => {
+            const r = card.getBoundingClientRect();
+            const x = ((e.clientX - r.left) / r.width) * 100;
+            const y = ((e.clientY - r.top) / r.height) * 100;
+            card.style.setProperty('--mx', `${x}%`);
+            card.style.setProperty('--my', `${y}%`);
+        });
+    });
+}
+
+// ─── SCROLL-TRIGGERED CARDS ───────────────────────
+function observeCards() {
+    const io = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const card = entry.target;
+                const idx = parseInt(card.dataset.idx, 10);
+                anime({
+                    targets: card,
+                    opacity: [0, 1],
+                    translateY: [40, 0],
+                    duration: 600,
+                    delay: (idx % 3) * 80,
+                    easing: 'cubicBezier(0.25, 1, 0.5, 1)'
+                });
+                io.unobserve(card);
+            }
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.project-card').forEach((c, i) => {
+        c.dataset.idx = i;
+        io.observe(c);
+    });
+}
+
+// ─── SECTION HEADER OBSERVER ──────────────────────
+function observeSection() {
+    const io = new IntersectionObserver((entries) => {
+        if (entries[0].isIntersecting) {
+            anime({
+                targets: '#sectionLabel',
+                opacity: [0, 1],
+                translateY: [10, 0],
+                duration: 500,
+                easing: 'easeOutQuad'
             });
+            anime({
+                targets: '#sectionHeader h2',
+                opacity: [0, 1],
+                translateY: [30, 0],
+                duration: 700,
+                delay: 100,
+                easing: 'cubicBezier(0.25, 1, 0.5, 1)'
+            });
+            anime({
+                targets: '#sectionHeader p',
+                opacity: [0, 1],
+                translateY: [20, 0],
+                duration: 600,
+                delay: 200,
+                easing: 'easeOutQuad'
+            });
+            io.disconnect();
         }
+    }, { threshold: 0.2 });
+    io.observe(document.getElementById('sectionHeader'));
+}
 
-        // Hamburger menu
-        const hamburger = document.getElementById('navHamburger');
-        const drawer = document.getElementById('navDrawer');
+// ─── RENDER PROJECTS ──────────────────────────────
+function getFaviconUrl(url) {
+    try {
+        const hostname = new URL(url).hostname;
+        return `https://icons.duckduckgo.com/ip3/${hostname}.ico`;
+    } catch { return null; }
+}
 
-        hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('open');
-            drawer.classList.toggle('open');
+function renderProjects() {
+    const container = document.getElementById('projectsContainer');
+    container.innerHTML = '';
+    reversedProjects.forEach(project => {
+        const card = document.createElement('div');
+        card.className = 'project-card';
+        const faviconUrl = project.demo ? getFaviconUrl(project.demo) : null;
+        const fallbackSvg = `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2360a5fa'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3C/svg%3E`;
+        const faviconHTML = `<img src="${faviconUrl || fallbackSvg}" alt="${project.name}" class="project-favicon" onerror="this.src='${fallbackSvg}'">`;
+        const tagsHTML = project.tags.map(tag => `<span class="tag">${tag}</span>`).join('');
+        const linksHTML = `
+            ${project.github ? `<a href="${project.github}" target="_blank" class="project-link link-github">GitHub</a>` : ''}
+            ${project.demo ? `<a href="${project.demo}" target="_blank" class="project-link link-demo">${translations[currentLang]['projects.demo']}</a>` : ''}
+        `;
+        card.innerHTML = `
+            <div class="project-header">
+                ${faviconHTML}
+                <h3 class="project-name">${project.name}</h3>
+            </div>
+            <p class="project-description">${project.description[currentLang]}</p>
+            <div class="project-tags">${tagsHTML}</div>
+            <div class="project-links">${linksHTML}</div>
+        `;
+        container.appendChild(card);
+    });
+    attachCardGlow();
+    observeCards();
+}
+
+// ─── LANGUAGE ─────────────────────────────────────
+function updateLanguage(lang) {
+    currentLang = lang;
+    document.querySelectorAll('[data-lang-key]').forEach(el => {
+        const key = el.getAttribute('data-lang-key');
+        if (translations[lang][key]) el.textContent = translations[lang][key];
+    });
+    document.getElementById('langToggle').textContent = lang === 'en' ? 'NL' : 'EN';
+    document.getElementById('langToggleMobile').textContent = lang === 'en' ? 'NL' : 'EN';
+    renderProjects();
+}
+
+// ─── SPLIT TEXT HELPER ────────────────────────────
+function splitTextToChars(el, text) {
+    el.innerHTML = text.split('').map(c =>
+        c === ' ' ? ' ' : `<span class="char">${c}</span>`
+    ).join('');
+}
+
+// ─── COUNTER ANIMATION ────────────────────────────
+function animateCounter(id, target, duration) {
+    const el = document.getElementById(id);
+    const obj = { val: 0 };
+    anime({
+        targets: obj,
+        val: target,
+        duration,
+        easing: 'easeOutExpo',
+        update() { el.textContent = Math.round(obj.val); }
+    });
+}
+
+// ─── MAIN INTRO SEQUENCE ──────────────────────────
+function runIntroSequence() {
+    const title = 'Tomask4';
+    splitTextToChars(document.getElementById('heroTitle'), title);
+
+    // 1. Loader bar fills
+    anime({
+        targets: '#loaderBar',
+        width: '100%',
+        duration: 900,
+        easing: 'easeInOutQuart'
+    });
+
+    // 2. Loader logo fades in
+    anime({
+        targets: '#loaderLogo',
+        opacity: [0, 1],
+        translateY: [20, 0],
+        duration: 600,
+        easing: 'easeOutQuad'
+    });
+
+    // 3. Loader exits, hero enters
+    setTimeout(() => {
+        anime({
+            targets: '#loader',
+            opacity: 0,
+            duration: 500,
+            easing: 'easeInQuad',
+            complete() {
+                document.getElementById('loader').style.display = 'none';
+            }
         });
 
-        // Close drawer when a link inside it is clicked
-        drawer.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                hamburger.classList.remove('open');
-                drawer.classList.remove('open');
-            });
+        // Nav slides in
+        anime({
+            targets: '#mainNav',
+            opacity: [0, 1],
+            translateY: [-20, 0],
+            duration: 600,
+            easing: 'cubicBezier(0.25, 1, 0.5, 1)'
         });
 
-        // Language toggle functionality
-        document.getElementById('langToggle').addEventListener('click', () => {
-            const newLang = currentLang === 'en' ? 'nl' : 'en';
-            updateLanguage(newLang);
+        // Profile image
+        anime({
+            targets: '#profileWrap',
+            opacity: [0, 1],
+            scale: [0.7, 1],
+            duration: 700,
+            delay: 100,
+            easing: 'cubicBezier(0.34, 1.56, 0.64, 1)'
         });
 
-        document.getElementById('langToggleMobile').addEventListener('click', () => {
-            const newLang = currentLang === 'en' ? 'nl' : 'en';
-            updateLanguage(newLang);
-            hamburger.classList.remove('open');
-            drawer.classList.remove('open');
+        // Title chars stagger
+        anime({
+            targets: '#heroTitle .char',
+            opacity: [0, 1],
+            translateY: [60, 0],
+            rotateX: [90, 0],
+            duration: 700,
+            delay: anime.stagger(60, { start: 200 }),
+            easing: 'cubicBezier(0.25, 1, 0.5, 1)'
         });
 
-        // Initialize
-        updateLanguage('en'); // Start with English
-    </script>
+        // Description
+        anime({
+            targets: '#heroDesc',
+            opacity: [0, 1],
+            translateY: [20, 0],
+            duration: 700,
+            delay: 650,
+            easing: 'easeOutQuad'
+        });
+
+        // Badges stagger
+        anime({
+            targets: '#heroMeta',
+            opacity: [0, 1],
+            translateY: [15, 0],
+            duration: 500,
+            delay: 800,
+            easing: 'easeOutQuad'
+        });
+
+        // Stats slide up
+        anime({
+            targets: '#statRow',
+            opacity: [0, 1],
+            translateY: [20, 0],
+            duration: 600,
+            delay: 950,
+            easing: 'easeOutQuad',
+            complete() {
+                animateCounter('statProjects', projects.length, 1000);
+                animateCounter('statYear', 2023, 800);
+                animateCounter('statTech', 12, 900);
+            }
+        });
+
+        // Divider line expands
+        anime({
+            targets: '#heroDivider',
+            width: ['0px', '60px'],
+            duration: 500,
+            delay: 1100,
+            easing: 'easeOutQuad'
+        });
+
+        // Socials
+        anime({
+            targets: '#heroSocials',
+            opacity: [0, 1],
+            translateY: [20, 0],
+            duration: 600,
+            delay: 1200,
+            easing: 'easeOutQuad'
+        });
+
+        // CTA
+        anime({
+            targets: '#ctaWrap',
+            opacity: [0, 1],
+            translateY: [20, 0],
+            duration: 600,
+            delay: 1350,
+            easing: 'easeOutQuad'
+        });
+
+        // Scroll hint
+        anime({
+            targets: '#scrollHint',
+            opacity: [0, 0.6],
+            duration: 700,
+            delay: 2000,
+            easing: 'easeOutQuad'
+        });
+
+        // Orbs slow drift
+        anime({
+            targets: '.hero-orb-1',
+            translateX: [0, 30, 0],
+            translateY: [0, -20, 0],
+            duration: 8000,
+            loop: true,
+            easing: 'easeInOutSine'
+        });
+        anime({
+            targets: '.hero-orb-2',
+            translateX: [0, -25, 0],
+            translateY: [0, 20, 0],
+            duration: 10000,
+            loop: true,
+            easing: 'easeInOutSine'
+        });
+
+    }, 1100);
+}
+
+// ─── HAMBURGER ────────────────────────────────────
+const hamburger = document.getElementById('navHamburger');
+const drawer = document.getElementById('navDrawer');
+
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    drawer.classList.toggle('open');
+});
+
+drawer.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+        hamburger.classList.remove('open');
+        drawer.classList.remove('open');
+    });
+});
+
+document.getElementById('langToggle').addEventListener('click', () => {
+    updateLanguage(currentLang === 'en' ? 'nl' : 'en');
+});
+document.getElementById('langToggleMobile').addEventListener('click', () => {
+    updateLanguage(currentLang === 'en' ? 'nl' : 'en');
+    hamburger.classList.remove('open');
+    drawer.classList.remove('open');
+});
+
+// ─── INIT ─────────────────────────────────────────
+renderProjects();
+observeSection();
+runIntroSequence();
+</script>
 </body>
 </html>
